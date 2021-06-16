@@ -10,7 +10,7 @@ while True:
     ora = adesso.strftime("%H:%M:%S")
     x = random.choice(s)
     print(ora,">",x)
+    i = input("Commento: ")
     with open("logs/" + oggi + ".txt","a") as log:
-        log.writelines("\n" + ora + " > " + x)
+        log.writelines("\n" + ora + " > " + x + " < " + i)
         log.close()
-    input("")
